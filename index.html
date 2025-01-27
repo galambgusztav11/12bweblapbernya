@@ -3,54 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12b második weboldala</title>
+    <title>12b Második Weboldala - Vicces verzió</title>
     <style>
         body {
-            background-color: #f0f8ff;
-            font-family: 'Arial', sans-serif;
+            background-color: #f0e68c;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            padding: 50px;
-            transition: background-color 1s ease;
+            padding: 30px;
+            color: #555;
         }
         h1 {
-            color: #ff6347;
-            font-size: 3em;
-            animation: glow 1.5s ease-in-out infinite;
+            color: #ff4500;
+            font-size: 3.5em;
+            text-shadow: 2px 2px 10px #ff6347;
+            margin-top: 20px;
         }
         p {
             font-size: 1.5em;
-            color: #2e8b57;
-            margin-top: 20px;
-            transition: color 1s ease;
+            color: #4b0082;
+            margin-top: 15px;
+            transition: color 0.5s ease;
         }
-        /* Animáció a szöveg világítására */
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347; }
-            50% { text-shadow: 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 40px #ff6347; }
-            100% { text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347; }
+        p:hover {
+            color: #ff1493;
         }
-
-        /* A szagos effekt - illatokhoz kapcsolódó illusztráció */
-        .smell {
-            background-image: url('https://www.example.com/smell-icon.png'); /* Cseréld ki saját képre */
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 100px;
-            height: 100px;
+        .image-container img {
+            width: 250px;
+            height: auto;
+            margin: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: rotate(15deg) scale(1.1);
+        }
+        .joke-box {
+            background-color: #ffebcd;
+            border: 2px solid #ff6347;
+            padding: 20px;
+            border-radius: 15px;
             margin-top: 30px;
-            animation: float 2s infinite;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.3em;
         }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
+        .joke-box:hover {
+            background-color: #ffeb3b;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            margin-top: 40px;
+            color: #2f4f4f;
+        }
+        .smile {
+            font-size: 3em;
+            color: #ff6347;
+        }
+        .animal-image {
+            width: 300px;
+            margin-top: 20px;
+            border-radius: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>12b második weboldala</h1>
-    <p>Elso Google volt</p>
-    <div class="smell"></div>
+
+    <h1>12b Második Weboldala</h1>
+    <p>Elso Google volt, most pedig jön a móka!</p>
+    
+    <div class="image-container">
+        <img src="https://placekitten.com/300/200" alt="Cuki macska">
+        <img src="https://placekitten.com/350/250" alt="Cuki macska 2">
+        <img src="https://placekitten.com/400/300" alt="Cuki macska 3">
+    </div>
+
+    <div class="joke-box">
+        <p><strong>Miért hozott a csirke napernyőt?</strong> Mert meg akarta árnyékolni a napot!</p>
+    </div>
+
+    <button onclick="tellJoke()">Tudj meg egy új viccet!</button>
+
+    <div class="footer">
+        <p class="smile">😊 Reméljük tetszett! Tudd meg, mi van a weboldalon máskor is!</p>
+    </div>
+
+    <div>
+        <img class="animal-image" src="https://placebear.com/500/300" alt="Vicces medve">
+    </div>
+
+    <script>
+        function tellJoke() {
+            const jokes = [
+                "Miért nem tud a könyv titkot tartani? Mert mindig kinyílik!",
+                "Miért hozott a csirke napernyőt? Mert meg akarta árnyékolni a napot!",
+                "Miért hozott a számítógép napernyőt? Mert meg akarta árnyékolni a memóriát!",
+                "Miért utálják a hóemberkék a nyarat? Mert megolvadnak a fagyitól!"
+            ];
+            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            alert(randomJoke);
+        }
+    </script>
+
 </body>
 </html>
