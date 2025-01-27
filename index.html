@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>12b második weboldala</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 1s ease;
+        }
+        h1 {
+            color: #ff6347;
+            font-size: 3em;
+            animation: glow 1.5s ease-in-out infinite;
+        }
+        p {
+            font-size: 1.5em;
+            color: #2e8b57;
+            margin-top: 20px;
+            transition: color 1s ease;
+        }
+        /* Animáció a szöveg világítására */
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347; }
+            50% { text-shadow: 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 40px #ff6347; }
+            100% { text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347; }
+        }
+
+        /* A szagos effekt - illatokhoz kapcsolódó illusztráció */
+        .smell {
+            background-image: url('https://www.example.com/smell-icon.png'); /* Cseréld ki saját képre */
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100px;
+            height: 100px;
+            margin-top: 30px;
+            animation: float 2s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <h1>12b masodik weboldala<h1>
-        elso google volt
+    <h1>12b második weboldala</h1>
+    <p>Elso Google volt</p>
+    <div class="smell"></div>
 </body>
 </html>
