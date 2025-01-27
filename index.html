@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12b Második Weboldala - Vicces verzió</title>
+    <title>Kedvenc Tantárgyak</title>
     <style>
         body {
             background-color: #f0e68c;
@@ -18,50 +18,30 @@
             text-shadow: 2px 2px 10px #ff6347;
             margin-top: 20px;
         }
-        p {
-            font-size: 1.5em;
-            color: #4b0082;
-            margin-top: 15px;
-            transition: color 0.5s ease;
-        }
-        p:hover {
-            color: #ff1493;
-        }
-        .image-container img {
-            width: 250px;
-            height: auto;
-            margin: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-        .image-container img:hover {
-            transform: rotate(15deg) scale(1.1);
-        }
-        .joke-box {
-            background-color: #ffebcd;
-            border: 2px solid #ff6347;
-            padding: 20px;
+        table {
+            margin-top: 40px;
+            width: 80%;
+            border-collapse: collapse;
+            background-color: #fff8dc;
             border-radius: 15px;
-            margin-top: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
             font-size: 1.3em;
         }
-        .joke-box:hover {
-            background-color: #ffeb3b;
-        }
-        button {
-            background-color: #4caf50;
+        th {
+            background-color: #ff6347;
             color: white;
-            font-size: 1.2em;
-            padding: 15px 30px;
-            border-radius: 8px;
-            border: none;
-            margin-top: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            border-radius: 10px 10px 0 0;
         }
-        button:hover {
-            background-color: #45a049;
+        td {
+            background-color: #ffebcd;
+        }
+        tr:hover {
+            background-color: #ffeb3b;
+            cursor: pointer;
         }
         .footer {
             margin-top: 40px;
@@ -71,50 +51,46 @@
             font-size: 3em;
             color: #ff6347;
         }
-        .animal-image {
-            width: 300px;
-            margin-top: 20px;
-            border-radius: 20px;
-        }
     </style>
 </head>
 <body>
 
-    <h1>12b Második Weboldala</h1>
-    <p>Elso Google volt, most pedig jön a móka!</p>
-    
-    <div class="image-container">
-        <img src="https://placekitten.com/300/200" alt="Cuki macska">
-        <img src="https://placekitten.com/350/250" alt="Cuki macska 2">
-        <img src="https://placekitten.com/400/300" alt="Cuki macska 3">
-    </div>
+    <h1>Kedvenc Tantárgyaim</h1>
 
-    <div class="joke-box">
-        <p><strong>Miért hozott a csirke napernyőt?</strong> Mert meg akarta árnyékolni a napot!</p>
-    </div>
-
-    <button onclick="tellJoke()">Tudj meg egy új viccet!</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Tantárgy</th>
+                <th>Tanár</th>
+                <th>Miért szeretem?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matematika</td>
+                <td>Kovács Tanár Úr</td>
+                <td>Mert izgalmas kihívások elé állít!</td>
+            </tr>
+            <tr>
+                <td>Biológia</td>
+                <td>Szabó Tanárnő</td>
+                <td>Érdekes felfedezéseket tehetünk a természetben.</td>
+            </tr>
+            <tr>
+                <td>Történelem</td>
+                <td>Péter Tanár Úr</td>
+                <td>A múltunk megértése mindig izgalmas.</td>
+            </tr>
+            <tr>
+                <td>Informatika</td>
+                <td>Varga Tanárnő</td>
+                <td>Mindig új technológiai dolgokat tanulunk.</td>
+            </tr>
+        </tbody>
+    </table>
 
     <div class="footer">
-        <p class="smile">😊 Reméljük tetszett! Tudd meg, mi van a weboldalon máskor is!</p>
+        <p class="smile">😊 Reméljük, tetszett a táblázat!</p>
     </div>
-
-    <div>
-        <img class="animal-image" src="https://placebear.com/500/300" alt="Vicces medve">
-    </div>
-
-    <script>
-        function tellJoke() {
-            const jokes = [
-                "Miért nem tud a könyv titkot tartani? Mert mindig kinyílik!",
-                "Miért hozott a csirke napernyőt? Mert meg akarta árnyékolni a napot!",
-                "Miért hozott a számítógép napernyőt? Mert meg akarta árnyékolni a memóriát!",
-                "Miért utálják a hóemberkék a nyarat? Mert megolvadnak a fagyitól!"
-            ];
-            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
-            alert(randomJoke);
-        }
-    </script>
 
 </body>
-</html>
